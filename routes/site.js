@@ -28,11 +28,11 @@ exports.gerar = function(req,res){
 */
   var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-  var numberA = Math.floor(Math.random() * 45);
-  var numberB = Math.floor(Math.random() * 45);
-  var numberC = Math.floor(Math.random() * 45);
-  var numberD = Math.floor(Math.random() * 45);
-  var numberE = Math.floor(Math.random() * 45);
+  var numberA = Math.floor(Math.random() * 51);
+  var numberB = Math.floor(Math.random() * 51);
+  var numberC = Math.floor(Math.random() * 51);
+  var numberD = Math.floor(Math.random() * 51);
+  var numberE = Math.floor(Math.random() * 51);
 
   var letraA = letras[numberA];
   var letraB = letras[numberB];
