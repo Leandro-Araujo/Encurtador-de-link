@@ -18,10 +18,9 @@ var SiteSchema = new Mongoose.Schema({
     site: String,
   newLink: {
     tipe: String,
-    index: {
-      unique: true
+    unique: true
     }
-  }
+  
 });
 
 var Site = Mongoose.model('Site', SiteSchema);
