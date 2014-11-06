@@ -16,10 +16,8 @@ Mongoose.connect('mongodb://localhost/sitelink');
 
 var SiteSchema = new Mongoose.Schema({
     site: String,
-  newLink: {
-    tipe: String,
-    unique: true
-    }
+    newLink: String
+    
   
 });
 
