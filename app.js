@@ -13,6 +13,8 @@ var banco = require('./model/db');
 
 var app = express();
 
+//Author: Leandro Silva Araújo
+// https://github.com/Leandro-Araujo
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
