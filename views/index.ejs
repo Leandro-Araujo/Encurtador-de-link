@@ -3,14 +3,21 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="css/bootstrap.css">
+
   </head>
   <body>
+    <div class="jumbotron">
+
     <h1><%= title %></h1>
+    <div class="container">
     <p><%= random %></p>
     <form method="post">
       Site:
       <input type="text" name="site">
-      <input type="submit" name="gerar" value="Gerar link">
+      <input type="submit" name="gerar" value="Gerar link" class="btn btn-primary">
     </form>
+  </div>
+</dov>
   </body>
 </html>
