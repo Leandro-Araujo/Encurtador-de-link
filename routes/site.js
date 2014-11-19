@@ -52,5 +52,6 @@ exports.gerar = function(req,res){
   console.dir(data);
 });
 
-  res.send(req.body.site+letras);
+  //res.send(req.body.site+letras);
+  res.render("site", {site: req.body.site, codigo: letras});
 }

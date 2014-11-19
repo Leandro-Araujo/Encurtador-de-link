@@ -5,7 +5,6 @@
 var Mongoose = require('mongoose');
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var site = require('./routes/site');
 var http = require('http');
 var path = require('path');
