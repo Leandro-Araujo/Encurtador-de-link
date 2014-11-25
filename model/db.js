@@ -16,13 +16,13 @@ db.once('open', function() {
 Mongoose.connect('mongodb://localhost/sitelink');
 
 var SiteSchema = new Mongoose.Schema({
+
     site: String,
     newLink: {
       type:String,
       unique: true,
       'default': shortId.generate
       }
-
 
 });
 

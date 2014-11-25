@@ -9,7 +9,7 @@ var site = require('./routes/site');
 var http = require('http');
 var path = require('path');
 var banco = require('./model/db');
-
+var lista = require('./routes/lista');
 var app = express();
 
 //Author: Leandro Silva Araújo
@@ -34,7 +34,8 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.post('/', site.gerar);
 app.get('/:site', site.criar);
-//app.get('/users', user.list);
+app.get('/lista/new', lista.listar);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

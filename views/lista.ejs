@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <title>Lista de sites</title>
+  </head>
+  <body>
+  <div class="jumbotron">
+  <div class="container">
+    <table class="table table-bordered">
+      <% sites.forEach(function(dados){ %>
+        <tr>
+          <td><%= dados.site %></td>
+          <td><%= dados.newLink %></td>
+        </tr>
+        <% }) %>
+    </table>
+  </div>
+  </div>
+  </body>
+</html>
