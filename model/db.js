@@ -4,6 +4,7 @@
  */
 
 var Mongoose = require('mongoose');
+var shortId = require('shortid');
 
 var db = Mongoose.connection;
 
@@ -18,7 +19,8 @@ var SiteSchema = new Mongoose.Schema({
     site: String,
     newLink: {
       type:String,
-      unique: true
+      unique: true,
+      'default': shortId.generate
       }
 
 

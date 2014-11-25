@@ -10,7 +10,7 @@ exports.criar = function(req, res){
   a = req.param('site');
   Site.findOne({newLink: a},function(err, link){
     if (err) return console.error(err);
-    console.log(link);
+    //console.log(link);
     //res.send(link.site);
     res.redirect("http://"+link.site);
   });
@@ -26,32 +26,18 @@ exports.gerar = function(req,res){
     console.log(data);
   });
 */
-  var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-  var numberA = Math.floor(Math.random() * 51);
-  var numberB = Math.floor(Math.random() * 51);
-  var numberC = Math.floor(Math.random() * 51);
-  var numberD = Math.floor(Math.random() * 51);
-  var numberE = Math.floor(Math.random() * 51);
-
-  var letraA = letras[numberA];
-  var letraB = letras[numberB];
-  var letraC = letras[numberC];
-  var letraD = letras[numberD];
-  var letraE = letras[numberE];
-
-  var letras = letraA+letraB+letraC+letraD+letraE;
 
   var link = new Site({
-    site: req.body.site,
-    newLink: letras
+    site: req.body.site
   });
 
   link.save(function(err, data) {
   if (err) return console.error(err);
   console.dir(data);
+  res.render("site", {site: req.body.site, codigo: data.newLink});
 });
 
   //res.send(req.body.site+letras);
-  res.render("site", {site: req.body.site, codigo: letras});
+
 }
